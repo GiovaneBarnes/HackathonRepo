@@ -17,13 +17,38 @@
     display: block;
     line-height: 0px;
     font-size: 16px;
+    width: 200px;
+    margin: 0 auto;
+    display: inline;
 }
+
+.newPostButton2 {
+    background-color: #002081;
+    padding: 20px 32px;
+    color: white; 
+    border: none;
+    border-radius: 12px;
+    display: block;
+    line-height: 0px;
+    font-size: 16px;
+    width: 200px;
+    margin: 0 auto;
+    display: inline;
+}
+
 
 label {
     font-size: 16px;
 }
 
 #usernameInput {
+    box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+#captionInput {
     box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
     border-radius: 5px;
     padding: 10px;
