@@ -6,10 +6,11 @@ import Feed from './components/Feed';
 
 function App() {
   return (
-    <div className="App">
-      <Header title="PhotoFeed" />
+    <div className="App" style={{
+      backgroundColor: '#bdab66'}}>
+      <Header title="Econmunity!"/>
       <Feed />
-      <Footer text="2022" />
+      <Footer text="Built By The Squad" />
     </div>
   );
 }
