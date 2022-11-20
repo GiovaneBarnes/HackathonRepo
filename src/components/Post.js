@@ -9,12 +9,8 @@ function Post(props){
             <h1>@{props.username}</h1>
             <img src={IMAGE_URL+props.imageId} alt="img for post"/>
             <h5>{props.caption}</h5>
-            {/* <h5>{props.category}</h5> */}
-            {/* <h5>{button}</h5> */}
-            
+            <h5>Quantity: {props.quantity}</h5>  
             {props.category && <button onClick={() => { return props.InterestHandler()}}>Interested</button>}
-
-            
         </div>
 
 

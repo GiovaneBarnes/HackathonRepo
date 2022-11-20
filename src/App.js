@@ -8,9 +8,9 @@ function App() {
   return (
     <div className="App" style={{
       backgroundColor: '#bdab66'}}>
-      <Header title="Resource Market!"/>
+      <Header title="Econmunity!"/>
       <Feed />
-      <Footer text="Build By The Squad" />
+      <Footer text="Built By The Squad" />
     </div>
   );
 }

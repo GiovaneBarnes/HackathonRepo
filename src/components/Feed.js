@@ -5,32 +5,32 @@ import './Feed.css';
 function Feed(){
     const postList = [
         {
-            username: 'kristen',
-            imageId: 0,
-            caption: 'my first picture',
+            username: 'KristenStewart',
+            imageId: 21,
+            caption: 'Requesting Heels',
             category: false,
-            quantity: 0
+            quantity: 1
         },
         {
-            username: 'janet',
-            imageId: 10,
-            caption: 'my second picture', 
+            username: 'JanetArlington',
+            imageId: 1,
+            caption: 'Requesting Dell Laptop', 
             category: false,
-            quantity: 0
+            quantity: 1
         },
         {
-            username: 'anthony',
+            username: 'AnthonyMackie',
             imageId: 20,
-            caption: 'my third picture',
+            caption: 'Requesting School Items!',
             category: false, 
-            quantity: 0
+            quantity: 8
         }        
     ];
 
     const [posts, setPosts] = useState(postList);
     const [imageId,setImageId] = useState(30);
     const [username,setUsername] = useState("");
-    const [caption,setCaption] = useState(false);
+    const [caption,setCaption] = useState("How can we help?");
     const [quantity, setQuantity] = useState(10);
     const [category, setCategory] = useState(false);
 
@@ -43,7 +43,7 @@ function Feed(){
             category: category, 
             quantity: quantity
         }, ...posts]);
-        setImageId(imageId+10);
+        setImageId(imageId+8);
         setUsername("");
         setCaption("");
         setQuantity(quantity)
@@ -57,14 +57,17 @@ function Feed(){
             username: username, 
             imageId: imageId,
             caption: caption, 
-            category: category
+            category: category,
+            quantity: quantity
         }, ...posts]);
         setImageId(imageId+10);
         setUsername("");
         setCaption("");
         setCategory(false);
+        setQuantity(quantity);
         
     }
+
 
     function InterestedButtonClick(){
         setQuantity(quantity - 1)
@@ -80,9 +83,10 @@ function Feed(){
 
             <button className="newPostButton" onClick={handleCreateNewPostOffer}>Offer</button>
             <button className="newPostButton2" onClick={handleCreateNewPostRequest}>Request</button>
+      
 
             {posts.map((post,k) => {
-                return <Post imageId={post.imageId} username={post.username} caption={post.caption} category={post.category} InterestHandler={InterestedButtonClick} key={k}/>
+                return <Post imageId={post.imageId} username={post.username} caption={post.caption} category={post.category} InterestHandler={InterestedButtonClick} quantity={post.quantity} key={k}/>
             })}
         </div>
     )
